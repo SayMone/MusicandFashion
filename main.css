@@ -1,9 +1,11 @@
+/* Resets browser css*/
 * {
     margin: 0px;
     padding: 0px;
     background-color:black;
 }
 
+/* Wrapper div around the whole page */
 .container {
     width: 960px;
    /* height:1000px;*/  
@@ -11,6 +13,7 @@
     font-family: 'Fira Sans', sans-serif;
 }
 
+/* Customizes overall nav bar*/
 .navbar {
     text-align:center;
     margin-top: 25px;
@@ -26,14 +29,14 @@
 
 .navbar li {
     display: inline;
-    border:1px solid purple;
+    border:2px solid purple;
 	text-align: center;
 	padding: 13px;
 	margin: 10px;
 }	
 .navbar a {
     background-color:#000000;
-    color: #0000CD;
+    color: red;
     text-align: center;
     padding: 10px 12px;
     text-decoration: none;
@@ -50,21 +53,37 @@
     margin-bottom: 25px;
 }
 
+/* Adjusts the paragraph on first page */
 .intro {
     margin: 0 auto;
     width: 750px;
 }
 
-p {
-    margin: 0 auto;
+/* Adjusts the paragraph on second and third page */
+.parafix {
+    width: 870px;
 }
 
+/* divides the seconds of the tops */
+.hrline {
+    border: 1px solid #ffffff;
+    opacity: 0.2;
+}
+
+/* Centers all paragraphs */
+p {
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* Customizes all h2 tags*/
 h2 {
     font-family: Sans-serif;
     color: purple;
     margin: 0 40px;
 }
 
+/* Customizes all h5 tags*/
 h5 {
     font-family: sans-serif;
     color: #0000CD;
@@ -89,8 +108,69 @@ h5 {
     width: 200px;
 }
 
+/* Customize the video */
 #video {
     margin: auto;
     display: block;
-    
 }
+
+/* Adds impact to first letter of every paragraphy */
+.impact {
+    font-size: 18px;
+    font-family: 'Roboto Condensed', impact, sans-serif;
+    font-style: italic;
+    padding: 2px;
+}
+
+.copyright {
+    margin: 0 auto;
+    text-align: center;
+    color: #d3d3d3;
+}
+
+.scroll-left {
+ height: 75px;	
+ overflow: hidden;
+ position: relative;
+ color: #0000CD;
+}
+
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 75px;
+ text-align: center;
+ font-size: 5em;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: scroll-left 10s linear infinite;
+ -webkit-animation: scroll-left 10s linear infinite;
+ animation: scroll-left 10s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%); 		
+ }
+ 
+ 100% { 
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%); 
+ }
